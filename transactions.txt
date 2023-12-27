@@ -1,0 +1,14 @@
+{"customer": "1", "cashier": "2", "currency": "USD/RUB", "amount": 3.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "1", "cashier": "2", "currency": "USD/RUB", "amount": 3.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "1", "cashier": "2", "currency": "USD/RUB", "amount": 3.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430\u043d", "cashier": "\u0414\u0430\u043d\u0438\u0438\u043b", "currency": "USD/RUB", "amount": 5.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "3", "cashier": "3", "currency": "USD/RUB", "amount": 3.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0446", "cashier": "\u0439", "currency": "USD/RUB", "amount": 19.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430", "cashier": "\u0432\u0430\u043d\u044f", "currency": "USD/RUB", "amount": 600.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430", "cashier": "\u0432\u0430\u043d\u044f", "currency": "USD/RUB", "amount": 600.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430", "cashier": "\u0432\u0430\u043d\u044f", "currency": "USD/RUB", "amount": 600.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430", "cashier": "\u0432\u0430\u043d\u044f", "currency": "USD/RUB", "amount": 600.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0418\u0432\u0430\u043d", "cashier": "\u0440\u043e\u043c\u0430", "currency": "USD/RUB", "amount": 5.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0420\u043e\u043c\u0430", "cashier": "\u0435\u0435", "currency": "USD/RUB", "amount": 22.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0414\u0430\u043d\u0438\u043a", "cashier": "\u0418\u0432\u0430\u043d", "currency": "USD/RUB", "amount": 700.0, "operation_type": "buy", "date": "2023-01-02"}
+{"customer": "\u0414\u0430\u043d\u0438\u043a", "cashier": "\u0420\u043e\u043c\u0430", "currency": "USD/RUB", "amount": 700.0, "operation_type": "buy", "date": "2023-01-02"}

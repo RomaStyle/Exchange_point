@@ -1,0 +1,14 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Текущее время: {{ current_time }}</p>
+    <h2>Курсы валют:</h2>
+    <ul>
+        {% for currency, rates in currency_rates.items() %}
+            <li>{{ currency }} - Покупка: {{ rates['buy'] }}, Продажа: {{ rates['sell'] }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<!-- templates/analytics.html -->
+{% extends 'base.html' %}
+
+{% block title %}Analytics - Exchange Point{% endblock %}
+
+{% block content %}
+    <h1>Analytics</h1>
+
+    <h2>Operations by Currency</h2>
+    <ul>
+        {% for currency, total_amount in currency_operations.items() %}
+            <li>{{ currency }}: {{ total_amount }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

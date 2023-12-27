@@ -1,0 +1,21 @@
+<!-- templates/operations_history.html -->
+{% extends 'base.html' %}
+
+{% block title %}Operations History - Exchange Point{% endblock %}
+
+{% block content %}
+    <h1>Operations History</h1>
+
+    <ul>
+        {% for operation in operations %}
+            <li>
+                Customer: {{ operation.customer }} |
+                Cashier: {{ operation.cashier }} |
+                Currency: {{ operation.currency }} |
+                Amount: {{ operation.amount }} |
+                Operation Type: {{ operation.operation_type }} |
+                Date: {{ operation.date }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

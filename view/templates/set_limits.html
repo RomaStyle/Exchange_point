@@ -1,0 +1,16 @@
+<!-- templates/set_limits.html -->
+{% extends 'base.html' %}
+
+{% block title %}Set Limits - Exchange Point{% endblock %}
+
+{% block content %}
+    <h1>Set Limits</h1>
+
+    <form method="post" action="{{ url_for('set_limits') }}">
+        <label>Buy Limit:</label>
+        <input type="text" name="buy_limit" required>
+        <label>Sell Limit:</label>
+        <input type="text" name="sell_limit" required>
+        <button type="submit">Set Limits</button>
+    </form>
+{% endblock %}

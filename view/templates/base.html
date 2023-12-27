@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{ messages | join('\n') }}");
+    </script>
+  {% endif %}
+{% endwith %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обменный пункт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #eee;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Обменный пункт</h1>
+    </header>
+
+    <nav>
+        <a href="/index">Главная</a>
+        <a href="/exchange">Обмен валюты</a>
+        <a href="/history">История операций</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <nav>
+        <ul>
+            <li><a href="/admin">Администратор</a></li> <!-- Новый пункт для администратора -->
+        </ul>
+    </nav>
+
+
+
+      <footer>
+          
+        &copy; 2023 Обменный пункт
+    </footer>
+</body>
+</html>

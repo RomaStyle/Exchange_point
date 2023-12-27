@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Страница обмена валюты</h2>
+    <form method="post" action="{{ url_for('perform_exchange') }}">
+        <label for="customer">Имя клиента:</label>
+        <input type="text" name="customer" required><br>
+
+        <label for="cashier">Имя кассира:</label>
+        <input type="text" name="cashier" required><br>
+
+        <label for="currency">Валюта:</label>
+        <select name="currency" required>
+            {% for currency in currency_rates.keys() %}
+                <option value="{{ currency }}">{{ currency }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="amount">Сумма:</label>
+        <input type="number" name="amount" step="0.01" required><br>
+
+        <label for="operation_type">Тип операции:</label>
+        <select name="operation_type" required>
+            <option value="buy">Покупка</option>
+            <option value="sell">Продажа</option>
+        </select><br>
+
+        <button type="submit">Выполнить обмен</button>
+    </form>
+{% endblock %}

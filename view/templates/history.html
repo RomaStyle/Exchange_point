@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>История операций</h2>
+    <table border="1">
+        <tr>
+            <th>Дата</th>
+            <th>Клиент</th>
+            <th>Кассир</th>
+            <th>Валюта</th>
+            <th>Сумма</th>
+            <th>Тип операции</th>
+        </tr>
+        {% for operation in operations %}
+            <tr>
+                <td>{{ operation.date }}</td>
+                <td>{{ operation.customer }}</td>
+                <td>{{ operation.cashier }}</td>
+                <td>{{ operation.currency }}</td>
+                <td>{{ operation.amount }}</td>
+                <td>{{ operation.operation_type }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

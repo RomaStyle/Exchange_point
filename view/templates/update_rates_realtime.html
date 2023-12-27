@@ -1,0 +1,18 @@
+<!-- templates/update_rates_realtime.html -->
+{% extends 'base.html' %}
+
+{% block title %}Update Rates - Exchange Point{% endblock %}
+
+{% block content %}
+    <h1>Update Rates in Real Time</h1>
+
+    <form method="post" action="{{ url_for('update_rates_realtime') }}">
+        {% for currency, rates in currency_rates_rates.items() %}
+            <label>{{ currency }}:</label>
+            Buy: <input type="text" name="{{ currency }}_rate" value="{{ rates['buy'] }}" required>
+            Sell: <input type="text" name="{{ currency }}_rate" value="{{ rates['sell'] }}" required>
+            <br>
+        {% endfor %}
+        <button type="submit">Update Rates</button>
+    </form>
+{% endblock %}

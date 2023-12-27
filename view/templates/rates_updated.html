@@ -1,0 +1,14 @@
+<!-- templates/rates_updated.html -->
+{% extends 'base.html' %}
+
+{% block title %}Rates Updated - Exchange Point{% endblock %}
+
+{% block content %}
+    <h1>Rates Updated</h1>
+    <p>New exchange rates:</p>
+    <ul>
+        {% for currency, rate in new_rates.items() %}
+            <li>{{ currency }}: {{ rate }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

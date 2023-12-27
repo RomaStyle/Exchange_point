@@ -1,0 +1,30 @@
+<!-- templates/admin.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Администратор</h1>
+
+    <h2>Изменение курсов валют</h2>
+    <form method="post" action="/update_rates">
+        {% for currency, rates in currency_rates.items() %}
+            <label>{{ currency }}:</label>
+            Buy: <input type="text" name="{{ currency }}_buy_rate" value="{{ rates['buy'] }}" required>
+            Sell: <input type="text" name="{{ currency }}_sell_rate" value="{{ rates['sell'] }}" required>
+            <br>
+        {% endfor %}
+        <button type="submit">Update Rates</button>
+    </form>
+
+    <h2>Установка ограничений</h2>
+    <form method="post" action="/set_limits">
+        <label>Максимальная сумма покупки:</label>
+        <input type="text" name="buy_limit" value="{{ buy_limit }}" required>
+        <label>Максимальная сумма продажи:</label>
+        <input type="text" name="sell_limit" value="{{ sell_limit }}" required>
+        <button type="submit">Set Limits</button>
+    </form>
+    <h2>Симуляция нового дня</h2>
+    <form method="get" action="/simulate_next_day">
+        <button type="submit">Новый день</button>
+    </form>
+{% endblock %}
